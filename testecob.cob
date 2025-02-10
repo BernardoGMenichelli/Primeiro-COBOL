@@ -1,11 +1,20 @@
        IDENTIFICATION DIVISION.
-       PROGRAM-ID. TESTECOB.
-       data division.
+       PROGRAM-ID. EXEMPLO.
+       ENVIRONMENT DIVISION.
+       CONFIGURATION SECTION.
+       INPUT-OUTPUT SECTION.
+
+       DATA DIVISION.
+       FILE SECTION.
        WORKING-STORAGE SECTION.
-       77 WS-HOME      PIC X(10).
+       01 WS-NOME          PIC A(30).
+       01 WS-IDADE         PIC 9(3).
+
        PROCEDURE DIVISION.
-           DISPLAY "DIGITE O NOME: "
-           ACCEPT WS-HOME
-           DISPLAY "NOME DIGITADO Eh: " WS-HOME
+           DISPLAY "DIGITE SEU NOME: ".
+           ACCEPT WS-NOME.
+           DISPLAY "DIGITE SUA IDADE: ".
+           ACCEPT WS-IDADE.
+           DISPLAY "OLÁ, " WS-NOME "! VOCÊ TEM " WS-IDADE " ANOS.".
            STOP RUN.
        
